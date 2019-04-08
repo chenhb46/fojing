@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+    header {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: #373B3E;
+    }
+
+    header h1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 19px;
+        color: #fff;
+        text-align: center;
+    }
+
+    header .left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;color: #fff;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: #ECDEC1;
+    }
+
+    #content {
+        font-size: 36px;
+        color: #632A00;
+        margin: 5px 10px;
+    }
+
+        #content .author{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+        #content .end{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>大方广佛华严经卷第七十八(之一 )</h1>
+        <div class="left" tapmode onclick="api.closeWin()">
+            <<返回</div>
+    </header>
+    <div id='content'>
+        <p class="author">入法界品第三十九之十九</p>
+        <p>尔时，善财童子合掌恭敬，重白弥勒菩萨摩诃萨言：</p>
+        <p>“大圣！我已先发阿耨多罗三藐三菩提心，而我未知菩萨云何学菩萨行？云何修菩萨道？</p>
+        <p>“大圣！一切如来授尊者记，一生当得阿耨多罗三藐三菩提；</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count = 1;
+
+        audio.play({
+            path: 'widget://res/huayanjing78.mp3'
+        }, function(ret, err) {
+            if (ret) {
+                //    alert(JSON.stringify(ret));
+                /*  if (count == 0) {
+                      audio.setProgress({
+                          progress: 2
+                      });
+
+                      count=1;
+                  }*/
+                //alert(JSON.stringify(ret));
+                if (ret.current == 38 && count == 1) {
+                    count = 2;
+                    $api.byId('content').innerHTML = "<p>若一生当得无上菩提，则已超越一切菩萨所住处，则已出过一切菩萨离生位，则已圆满一切波罗蜜，则已深入一切诸忍门，则已具足一切菩萨地，则已游戏一切解脱门，则已成就一切三昧法，则已通达一切菩萨行，则已证得一切陀罗尼辩才，</p> ";
+                }
+                if (ret.current == 72 && count == 2) {
+                    count = 3;
+                    $api.byId('content').innerHTML = "<p>则已于一切菩萨自在中而得自在，则已积集一切菩萨助道法，则已游戏智慧方便，则已出生大神通智，则已成就一切学处，则已圆满一切妙行，则已满足一切大愿，则已领受一切佛所记，则已了知一切诸乘门，则已堪受一切如来所护念，</p>";
+                }
+                if (ret.current == 106 && count == 3) {
+                    count = 4;
+                    $api.byId('content').innerHTML = "<p>则已能摄一切佛菩提，则已能持一切佛法藏，则已能持一切诸佛菩萨秘密藏，则已能于一切菩萨众中为上首，则已能为破烦恼魔军大勇将，则已能作出生死旷野大导师，则已能作治诸惑重病大医王，则已能于一切众生中为最胜，</p>";
+                }
+                if (ret.current == 138 && count == 4) {
+                    count = 5;
+                    $api.byId('content').innerHTML = "<p>则已能于一切世主中得自在，则已能于一切圣人中最第一，则已能于一切声闻、独觉中最增上，则已能于生死海中为船师，则已能布调伏一切众生网，则已能观一切众生根，则已能摄一切众生界，则已能守护一切菩萨众，则已能谈议一切菩萨事，</p>";
+                }
+                if (ret.current == 172 && count == 5) {
+                    count = 6;
+                    $api.byId('content').innerHTML = "<p>则已能往诣一切如来所，则已能住止一切如来会，则已能现身一切众生前，则已能于一切世法无所染，则已能超越一切魔境界，则已能安住一切佛境界，则已能到一切菩萨无碍境，则已能精勤供养一切佛，则已与一切诸佛法同体性，则已系妙法缯，</p>";
+                }
+                if (ret.current == 208 && count == 6) {
+                    count = 7;
+                    $api.byId('content').innerHTML = "<p>已受佛灌顶，已住一切智，已能普生一切佛法，已能速践一切智位。</p><p>“大圣！菩萨云何学菩萨行？云何修菩萨道？随所修学，疾得具足一切佛法，悉能度脱所念众生，普能成满所发大愿，普能究竟所起诸行，普能安慰一切天人，</p>";
+                }
+                if (ret.current == 240 && count == 7) {
+                    count = 8;
+                    $api.byId('content').innerHTML = "<p>不负自身，不断三宝，不虚一切佛菩萨种，能持一切诸佛法眼。如是等事，愿皆为说！”</p><p>尔时，弥勒菩萨摩诃萨观察一切道场众会，指示善财而作是言：</p>“诸仁者！汝等见此长者子，今于我所问菩萨行诸功德不？</p>";
+                }
+                if (ret.current == 269 && count == 8) {
+                    count = 9;
+                    $api.byId('content').innerHTML = "<p>诸仁者！此长者子，勇猛精进，志愿无杂，深心坚固，恒不退转；具胜希望，如救头然，无有厌足；乐善知识，亲近供养，处处寻求，承事请法。诸仁者！此长者子，曩于福城受文殊教，展转南行求善知识，经由一百一十善知识已，</p>";
+                }
+                if (ret.current == 302 && count == 9) {
+                    count = 10;
+                    $api.byId('content').innerHTML = "<p>然后而来至于我所，未曾暂起一念疲懈。</p><p>“诸仁者！此长者子甚为难有，趣向大乘，乘于大慧，发大勇猛，擐大悲甲，以大慈心救护众生，起大精进波罗蜜行，作大商主护诸众生，为大法船度诸有海，住于大道，集大法宝，修诸广大助道之法；</p>";
+                }
+                if (ret.current == 335 && count == 10) {
+                    count = 11;
+                    $api.byId('content').innerHTML = "<p>如是之人，难可得闻，难可得见，难得亲近、同居、共行。何以故？此长者子发心救护一切众生，令一切众生，解脱诸苦，超诸恶趣，离诸险难，破无明闇，出生死野，息诸趣轮，度魔境界，不著世法，出欲淤泥，断贪鞅，解见缚，</p>";
+                }
+                if (ret.current == 368 && count == 11) {
+                    count = 12;
+                    $api.byId('content').innerHTML = "<p>坏想宅，绝迷道，摧慢幢，拔惑箭，撤睡盖，裂爱网，灭无明，度有流，离谄幻，净心垢，断痴惑，出生死。</p> <p>“诸仁者！此长者子，为被四流漂泊者，造大法船；为被见泥没溺者，立大法桥；为被痴暗昏迷者，然大智灯；</p>";
+                }
+                if (ret.current == 401 && count == 12) {
+                    count = 13;
+                    $api.byId('content').innerHTML = "<p>为行生死旷野者，开示圣道；为婴烦恼重病者，调和法药；为遭生、老、死苦者，饮以甘露，令其安隐；为入贪、恚、痴火者，沃以定水，使得清凉；多忧恼者，慰喻使安；系有狱者，晓诲令出；入见网者，开以智剑；住界城者，示诸脱门；</p>";
+                }
+                if (ret.current == 401 && count == 13) {
+                    count = 14;
+                    $api.byId('content').innerHTML = "<p>为行生死旷野者，开示圣道；为婴烦恼重病者，调和法药；为遭生、老、死苦者，饮以甘露，令其安隐；为入贪、恚、痴火者，沃以定水，使得清凉；多忧恼者，慰喻使安；系有狱者，晓诲令出；入见网者，开以智剑；住界城者，示诸脱门；</p>";
+                }
+                if (ret.current == 431 && count == 14) {
+                    count = 15;
+                    $api.byId('content').innerHTML = "<p>在险难者，导安隐处；惧结贼者，与无畏法；堕恶趣者，授慈悲手；拘害蕴者，示涅槃城；界蛇所缠，解以圣道；著于六处空聚落者，以智慧光引之令出；住邪济者，令入正济；近恶友者，示其善友；乐凡法者，诲以圣法；</p>";
+                }
+                if (ret.current == 464 && count == 15) {
+                    count = 16;
+                    $api.byId('content').innerHTML = "<p>著生死者，令其趣入一切智城。</p><p>“诸仁者！此长者子，恒以此行救护众生，发菩提心未尝休息，求大乘道曾无懈倦，饮诸法水不生厌足，恒勤积集助道之行，常乐清净一切法门，修菩萨行不舍精进，成满诸愿善行方便，</p>";
+                }
+                if (ret.current == 496 && count == 16) {
+                    count = 17;
+                    $api.byId('content').innerHTML = "<p>见善知识情无厌足，事善知识身不疲懈，闻善知识所有教诲常乐顺行未曾违逆。</p>";
+                }
+                if (ret.current == 509 && count == 17) {
+                    audio.stop();
+                    api.confirm({
+                        title: '是否继续之二？',
+                        msg: '是否继续播放华严经第78卷之二？',
+                        buttons: ['继续', '取消']
+                    }, function(ret, err) {
+                        if (ret) {
+                            //alert( JSON.stringify( ret ) );
+                            if (ret.buttonIndex == 1) {
+                              api.openWin({
+                                  name: 'huaynajing78-2',
+                                  url: './huayanjing78-2.html',
+                                  pageParam: {
+                                      name: 'test'
+                                  }
+                              });
+                            }
+                            if (ret.buttonIndex == 2) {
+                                api.closeToWin({
+                                    name: 'root'
+                                });
+
+                            }
+                        } else {
+                            alert(JSON.stringify(err));
+                        }
+                    });
+
+                }
+            } else {
+                //  alert(JSON.stringify(err));
+                alert("音频播放失败，请与作者联系，谢谢！作者：chenhb33@163.com");
+            }
+        });
+    };
+</script>
+
+</html>

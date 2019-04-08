@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+    header {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: #373B3E;
+    }
+
+    header h1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 19px;
+        color: #fff;
+        text-align: center;
+    }
+
+    header .left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;color: #fff;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: #ECDEC1;
+    }
+
+    #content {
+        font-size: 36px;
+        color: #632A00;
+        margin: 5px 10px;
+    }
+
+        #content .author{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+        #content .end{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>大方广佛华严经卷第七十八(之二 )</h1>
+        <div class="left" tapmode onclick="api.closeWin()">
+            <<返回</div>
+    </header>
+    <div id='content'>
+        <p>“诸仁者！若有众生能发阿耨多罗三藐三菩提心，是为希有；若发心已，又能如是精进方便集诸佛法，倍为希有；又能如是求菩萨道，又能如是净菩萨行，又能如是事善知识，又能如是如救头然，又能如是顺知识教，又能如是坚固修行，</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count = 0;
+
+        audio.play({
+            path: 'widget://res/huayanjing78.mp3'
+        }, function(ret, err) {
+            if (ret) {
+                //    alert(JSON.stringify(ret));
+                if (count == 0) {
+                    count = 1;
+                    audio.setProgress({
+                        progress: 14
+                    });
+                    audio.setVolume({
+                        volume: 0
+                    });
+
+                }
+                //alert(JSON.stringify(ret));
+                if (ret.current == 509) {
+                    audio.setVolume({
+                        volume: 1
+                    });
+
+                }
+                if (ret.current == 542 && count == 1) {
+                    count = 2;
+                    $api.byId('content').innerHTML = "<p>又能如是集菩提分，又能如是不求一切名闻利养，又能如是不舍菩萨纯一之心，又能如是不乐家宅、不著欲乐、不恋父母亲戚知识，但乐追求菩萨伴侣，又能如是不顾身命，唯愿勤修一切智道，应知展转倍更难得。</p> ";
+                }
+                if (ret.current == 572 && count == 2) {
+                    count = 3;
+                    $api.byId('content').innerHTML = "<p>“诸仁者！余诸菩萨经于无量百千万亿那由他劫，乃能满足菩萨愿行，乃能亲近诸佛菩提；此长者子，于一生内，则能净佛刹，则能化众生，则能以智慧深入法界，则能成就诸波罗蜜，则能增广一切诸行，则能圆满一切大愿，</p>";
+                }
+                if (ret.current == 603 && count == 3) {
+                    count = 4;
+                    $api.byId('content').innerHTML = "<p>则能超出一切魔业，则能承事一切善友，则能清净诸菩萨道，则能具足普贤诸行。”尔时，弥勒菩萨摩诃萨如是称叹善财童子种种功德，令无量百千众生发菩提心已，告善财言：</p>";
+                }
+                if (ret.current == 628 && count == 4) {
+                    count = 5;
+                    $api.byId('content').innerHTML = "<p>“善哉善哉！善男子！汝为饶益一切世间，汝为救护一切众生，汝为勤求一切佛法故，发阿耨多罗三藐三菩提心。</p>";
+                }
+                if (ret.current == 643 && count == 5) {
+                    count = 6;
+                    $api.byId('content').innerHTML = "<p>“善男子！汝获善利，汝善得人身，汝善住寿命，汝善值如来出现，汝善见文殊师利大善知识。汝身是善器，为诸善根之所润泽。汝为白法之所资持，所有解欲悉已清净，已为诸佛共所护念，已为善友共所摄受。何以故？</p>";
+                }
+                if (ret.current == 675 && count == 6) {
+                    count = 7;
+                    $api.byId('content').innerHTML = "<p>“善男子！菩提心者，犹如种子，能生一切诸佛法故；菩提心者，犹如良田，能长众生白净法故；菩提心者，犹如大地，能持一切诸世间故；菩提心者，犹如净水，能洗一切烦恼垢故；菩提心者，犹如大风，普于世间无所碍故；</p>";
+                }
+                if (ret.current == 706 && count == 7) {
+                    count = 8;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如盛火，能烧一切诸见薪故；菩提心者，犹如净日，普照一切诸世间故；菩提心者，犹如盛月，诸白净法悉圆满故；菩提心者，犹如明灯，能放种种法光明故；菩提心者，犹如净目，普见一切安危处故；</p>";
+                }
+                if (ret.current == 737 && count == 8) {
+                    count = 9;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如大道，普令得入大智城故；菩提心者，犹如正济，得其令离诸邪法故；菩提心者，犹如大车，普能运载诸菩萨故；菩提心者，犹如门户，开示一切菩萨行故；菩提心者，犹如宫殿，安住修习三昧法故；</p>";
+                }
+                if (ret.current == 767 && count == 9) {
+                    count = 10;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如园苑，于中游戏受法乐故；菩提心者，犹如舍宅，安隐一切诸众生故；菩提心者，则为所归，利益一切诸世间故；菩提心者，则为所依，诸菩萨行所依处故；菩提心者，犹如慈父，训导一切诸菩萨故；</p>";
+                }
+                if (ret.current == 799 && count == 10) {
+                    count = 11;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如慈母，生长一切诸菩萨故；菩提心者，犹如乳母，养育一切诸菩萨故；菩提心者，犹如善友，成益一切诸菩萨故；菩提心者，犹如君主，胜出一切二乘人故；菩提心者，犹如帝王，一切愿中得自在故；</p>";
+                }
+                if (ret.current == 831 && count == 11) {
+                    count = 12;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如大海，一切功德悉入中故；菩提心者，如须弥山，于诸众生心平等故；菩提心者，如铁围山，摄持一切诸世间故；菩提心者，犹如雪山，长养一切智慧药故；菩提心者，犹如香山，出生一切功德香故；</p>";
+                }
+                if (ret.current == 863 && count == 12) {
+                    count = 13;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如虚空，诸妙功德广无边故；菩提心者，犹如莲华，不染一切世间法故；菩提心者，如调慧象，其心善顺不犷戾故；菩提心者，如良善马，远离一切诸恶性故；菩提心者，如调御师，守护大乘一切法故；</p>";
+                }
+                if (ret.current == 895 && count == 13) {
+                    count = 14;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如良药，能治一切烦恼病故；菩提心者，犹如坑阱，陷没一切诸恶法故；菩提心者，犹如金刚，悉能穿彻一切法故；菩提心者，犹如香箧，能贮一切功德香故；菩提心者，犹如妙华，一切世间所乐见故；</p>";
+                }
+                if (ret.current == 926 && count == 14) {
+                    count = 15;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如白栴檀，除众欲热使清凉故；菩提心者，如黑沉香，能熏法界悉周遍故；菩提心者，如善见药王，能破一切烦恼病故；菩提心者，如毗笈摩药，能拔一切诸惑箭故；菩提心者，犹如帝释，一切主中最为尊故；</p>";
+                }
+                if (ret.current == 959 && count == 15) {
+                    count = 16;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如毗沙门，能断一切贫穷苦故；菩提心者，如功德天，一切功德所庄严故；菩提心者，如庄严具，庄严一切诸菩萨故；菩提心者，如劫烧火，能烧一切诸有为故；菩提心者，如无生根药，长养一切诸佛法故；</p>";
+                }
+                if (ret.current == 991 && count == 16) {
+                    count = 17;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如龙珠，能消一切烦恼毒故；菩提心者，如水清珠，能清一切烦恼浊故；菩提心者，如如意珠，周给一切诸贫乏故；菩提心者，如功德瓶，满足一切众生心故；菩提心者，如如意树，能雨一切庄严具故；</p>";
+                }
+                if (ret.current == 1022 && count == 17) {
+                    count = 18;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如鹅羽衣，不受一切生死垢故；菩提心者，如白氎线，从本已来性清净故；菩提心者，如快利犁，能治一切众生田故；菩提心者，如那罗延，能摧一切我见敌故；菩提心者，犹如快箭，能破一切诸苦的故；</p>";
+                }
+                if (ret.current == 1053 && count == 18) {
+                    count = 19;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如利矛，能穿一切烦恼甲故；菩提心者，犹如坚甲，能护一切如理心故；菩提心者，犹如利刀，能斩一切烦恼首故；菩提心者，犹如利剑，能断一切憍慢铠故；菩提心者，如勇将幢，能伏一切诸魔军故；</p>";
+                }
+                if (ret.current == 1084 && count == 19) {
+                    count = 20;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如利锯，能截一切无明树故；菩提心者，犹如利斧，能伐一切诸苦树故；菩提心者，犹如兵仗，能防一切诸苦难故；菩提心者，犹如善手，防护一切诸度身故；菩提心者，犹如好足，安立一切诸功德故；</p>";
+                }
+                if (ret.current == 1115 && count == 20) {
+                    count = 21;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如眼药，灭除一切无明翳故；菩提心者，犹如钳镊，能拔一切身见刺故；菩提心者，犹如卧具，息除生死诸劳苦故；菩提心者，如善知识，能解一切生死缚故；菩提心者，如好珍财，能除一切贫穷事故；</p>";
+                }
+                if (ret.current == 1145 && count == 21) {
+                    count = 22;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如大导师，善知菩萨出要道故；菩提心者，犹如伏藏，出功德财无匮乏故；菩提心者，犹如涌泉，生智慧水无穷尽故；菩提心者，犹如明镜，普现一切法门像故；菩提心者，犹如莲华，不染一切诸罪垢故；</p>";
+                }
+                if (ret.current == 1176 && count == 22) {
+                    count = 23;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如大河，流引一切度摄法故；菩提心者，如大龙王，能雨一切妙法雨故；菩提心者，犹如命根，任持菩萨大悲身故；菩提心者，犹如甘露，能令安住不死界故；菩提心者，犹如大网，普摄一切诸众生故；</p>";
+                }
+                if (ret.current == 1207 && count == 23) {
+                    count = 24;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如罥索，摄取一切所应化故；菩提心者，犹如钩饵，出有渊中所居者故；菩提心者，如阿伽陀药，能令无病永安隐故；菩提心者，如除毒药，悉能消歇贪爱毒故；菩提心者，如善持咒，能除一切颠倒毒故；</p>";
+                }
+                if (ret.current == 1239 && count == 24) {
+                    count = 25;
+                    $api.byId('content').innerHTML = "<p>菩提心者，犹如疾风，能卷一切诸障雾故；菩提心者，如大宝洲，出生一切觉分宝故；菩提心者，如好种性，出生一切白净法故；菩提心者，犹如住宅，诸功德法所依处故；菩提心者，犹如市肆，菩萨商人贸易处故；</p>";
+                }
+                if (ret.current == 1270 && count == 25) {
+                    count = 26;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如炼金药，能治一切烦恼垢故；菩提心者，犹如好蜜，圆满一切功德味故；菩提心者，犹如正道，令诸菩萨入智城故；菩提心者，犹如好器，能持一切白净法故；菩提心者，犹如时雨，能灭一切烦恼尘故；</p>";
+                }
+                if (ret.current == 1301 && count == 26) {
+                    count = 27;
+                    $api.byId('content').innerHTML = "<p>菩提心者，则为住处，一切菩萨所住处故；菩提心者，则为寿行，不取声闻解脱果故；菩提心者，如净琉璃，自性明洁无诸垢故；菩提心者，如帝青宝，出过世间二乘智故；菩提心者，如更漏鼓，觉诸众生烦恼睡故；</p>";
+                }
+                if (ret.current == 1334 && count == 27) {
+                    count = 28;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如清净水，性本澄洁无垢浊故；菩提心者，如阎浮金，映夺一切有为善故；菩提心者，如大山王，超出一切诸世间故；菩提心者，则为所归，不拒一切诸来者故；菩提心者，则为义利，能除一切衰恼事故；</p>";
+                }
+                if (ret.current == 1365 && count == 28) {
+                    count = 29;
+                    $api.byId('content').innerHTML = "<p>菩提心者，则为妙宝，能令一切心欢喜故；菩提心者，如大施会，充满一切众生心故；菩提心者，则为尊胜，诸众生心无与等故；菩提心者，犹如伏藏，能摄一切诸佛法故；菩提心者，如因陀罗网，能伏烦恼阿修罗故；</p>";
+                }
+                if (ret.current == 1397 && count == 29) {
+                    count = 30;
+                    $api.byId('content').innerHTML = "<p>菩提心者，如婆楼那风，能动一切所应化故；菩提心者，如因陀罗火，能烧一切诸惑习故；菩提心者，如佛支提，一切世间应供养故。</p>";
+                }
+                if (ret.current == 1416 && count == 30) {
+                    audio.stop();
+                    api.confirm({
+                        title: '是否继续之三？',
+                        msg: '是否继续播放华严经第78卷之三？',
+                        buttons: ['继续', '取消']
+                    }, function(ret, err) {
+                        if (ret) {
+                            //alert( JSON.stringify( ret ) );
+                            if (ret.buttonIndex == 1) {
+                                api.openWin({
+                                    name: 'huaynajing78-3',
+                                    url: './huayanjing78-3.html',
+                                    pageParam: {
+                                        name: 'test'
+                                    }
+                                });
+                            }
+                            if (ret.buttonIndex == 2) {
+                                api.closeToWin({
+                                    name: 'root'
+                                });
+
+                            }
+                        } else {
+                            alert(JSON.stringify(err));
+                        }
+                    });
+
+                }
+            } else {
+                //  alert(JSON.stringify(err));
+                alert("音频播放失败，请与作者联系，谢谢！作者：chenhb33@163.com");
+            }
+        });
+    };
+</script>
+
+</html>

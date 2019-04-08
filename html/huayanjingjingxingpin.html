@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+    header {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: #373B3E;
+    }
+
+    header h1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 17px;
+        color: #fff;
+        text-align: center;
+    }
+
+    header .left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;color: #fff;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: #ECDEC1;
+    }
+
+    #content {
+        font-size: 36px;
+        color: #632A00;
+        margin: 5px 10px;
+    }
+
+        #content .author{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+        #content .end{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>大方广佛华严经卷第十四•净行品第十一</h1>
+        <div class="left" tapmode onclick="api.closeWin()">
+            <<返回</div>
+    </header>
+    <div id='content'>
+      <p class="author">唐于阗国三藏沙门实叉难陀译</p>
+      <p>尔时智首菩萨问文殊师利菩萨言。</p><p>佛子。菩萨云何得无过失身语意业。云何得不害身语意业。云何得不可毁身语意业。云何得不可坏身语意业。云何得不退转身语意业。云何得不可动身语意业。云何得殊胜身语意业。</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count = 0;
+
+        audio.play({
+            path: 'widget://res/huayanjingjingxingpin.mp3'
+        }, function(ret, err) {
+            if (ret) {
+
+                if (ret.current == 101) {
+                  $api.byId('content').innerHTML = "<p>云何得清净身语意业。云何得无染身语意业。云何得智为先导身语意业。云何得生处具足。种族具足。家具足。色具足。相具足。念具足。慧具足。行具足。无畏具足。觉悟具足。云何得胜慧。第一慧。最上慧。最胜慧。无量慧。</p>";
+                }
+                if (ret.current == 150) {
+                  $api.byId('content').innerHTML = "<p>无数慧。不思议慧。无与等慧。不可量慧。不可说慧。云何得因力。欲力。方便力。缘力。所缘力。根力观察力。奢摩他力。毗钵舍那力。思惟力。云何得蕴善巧。界善巧。处善巧。缘起善巧。欲界善巧。色界善巧。无色界善巧。</p> ";
+                }
+                if (ret.current == 194) {
+                  $api.byId('content').innerHTML = "<p>过去善巧。未来善巧。现在善巧。云何善修习念觉分。择法觉分。精进觉分。喜觉分。猗觉分。定觉分。舍觉分。空。无相。无愿。云何得圆满檀波罗蜜。尸波罗蜜。羼提波罗蜜。毗黎耶波罗蜜。禅那波罗蜜。般若波罗蜜。</p> ";
+                }
+                if (ret.current == 236) {
+                  $api.byId('content').innerHTML = "<p>及以圆满慈悲喜舍。云何得处。非处智力。过去现在业报智力。根胜劣智力。种种界智力。种种解智力。一切至处道智力。禅解脱三昧染净智力。宿住念智力。无障碍天眼智力。断诸习智力。云何常得天王。龙王。夜叉王。</p> ";
+                }
+                if (ret.current == 277) {
+                  $api.byId('content').innerHTML = "<p>乾闼婆王。阿修罗王。迦楼罗王。紧那罗王。摩侯罗伽王。人王。梵王。之所守护。恭敬供养。云何得与一切众生为依。为救。为归。为趣。为炬。为明。为照。为导。为胜导。为普导。云何于一切众生中为第一。为大。为胜。为最胜。</p> ";
+                }
+                if (ret.current == 321) {
+                  $api.byId('content').innerHTML = "<p>为妙。为极妙。为上。为无上。为无等。为无等等。</p><p>尔时文殊师利菩萨告智首菩萨言。善哉。佛子。汝今为欲多所饶益。多所安隐。哀愍世间，利乐天人。问如是义。佛子。若诸菩萨善用其心。则获一切胜妙功德。于诸佛法。心无所碍。</p> ";
+                }
+                if (ret.current == 361) {
+                  $api.byId('content').innerHTML = "<p>住去来今诸佛之道。随众生住。恒不舍离。如诸法相。悉能通达。断一切恶。具足众善。当如普贤色像第一。一切行愿皆得具足。于一切法。无不自在。而为众生第二导师。佛子。云何用心。能获一切胜妙功德。佛子。</p> ";
+                }
+                if (ret.current == 397) {
+                  $api.byId('content').innerHTML = "<p>菩萨在家 当愿众生</p><p>知家性空 免其逼迫</p><p>孝事父母 当愿众生</p><p>善事于佛 护养一切</p><p>妻子集会 当愿众生</p><p>怨亲平等 永离贪著</p><p>若得五欲 当愿众生</p><p>拔除欲箭 究竟安稳</p><p>妓乐聚会 当愿众生</p><p>以法自娱 了妓非实</p><p>若在宫室 当愿众生</p><p>入于圣地 永除秽欲</p> ";
+                }
+                if (ret.current == 444) {
+                  $api.byId('content').innerHTML = "<p>著璎珞时 当愿众生 </p><p>舍诸伪饰 到真实处</p><p>上升楼阁 当愿众生</p><p>升正法楼 彻见一切</p><p>若有所施 当愿众生</p><p>一切能舍 心无爱著</p><p>众会聚集 当愿众生</p><p>舍众聚法 成一切智</p><p>若在厄难 当愿众生</p><p>随意自在 所行无碍</p><p>舍居家时 当愿众生</p><p>出家无碍 心得解脱</p> ";
+                }
+                if (ret.current == 491) {
+                  $api.byId('content').innerHTML = "<p>入僧伽蓝 当愿众生</p><p>演说种种 无乖诤法</p><p>诣大小师 当愿众生</p><p>巧事师长 习行善法</p><p>求请出家 当愿众生</p><p>得不退法 心无障碍</p><p>脱去俗服 当愿众生</p><p>勤修善根 舍诸罪轭</p><p>剃除须发 当愿众生</p><p>永离烦恼 究竟寂灭</p><p>著袈裟衣 当愿众生</p><p>心无所染 具大仙道</p> ";
+                }
+                if (ret.current == 536) {
+                  $api.byId('content').innerHTML = "<p>正出家时 当愿众生</p><p>同佛出家 救护一切</p><p>自归於佛 当愿众生</p><p>绍隆佛种 发无上意</p><p>自归于法 当愿众生</p><p>深入经藏 智慧如海</p><p>自归于僧 当愿众生</p><p>统理大众 一切无碍</p><p>受学戒时 当愿众生</p><p>善学于戒 不作众恶</p><p>受阇黎教 当愿众生</p><p>具足威仪 所行真实</p> ";
+                }
+                if (ret.current == 584) {
+                  $api.byId('content').innerHTML = "<p>受和尚教 当愿众生</p><p>入无生智 到无依处</p><p>受具足戒 当愿众生</p><p>具诸方便 得最胜法</p><p>若入堂宇 当愿众生</p><p>升无上堂 安住不动</p><p>若敷床坐 当愿众生</p><p>开敷善法 见真实相</p><p>正身端坐 当愿众生</p><p>坐菩提座 心无所着</p><p>结跏趺坐 当愿众生</p><p>善根坚固 得不动地</p> ";
+                }
+                if (ret.current == 630) {
+                  $api.byId('content').innerHTML = "<p>修行于定 当愿众生</p><p>以定伏心 究竟无馀</p><p>若修于观 当愿众生</p><p>见如实理 永无乖诤</p><p>舍跏趺坐 当愿众生</p><p>观诸行法 悉归散灭</p><p>下足住时 当愿众生</p><p>心得解脱 安住不动</p><p>若举于足 当愿众生</p><p>出生死海 具众善法</p><p>着下裙时 当愿众生</p><p>服诸善根 具足惭愧</p> ";
+                }
+                if (ret.current == 677) {
+                  $api.byId('content').innerHTML = "<p>整衣束带 当愿众生</p><p>检束善根 不令散失</p><p>若著上衣 当愿众生</p><p>获胜善根 至法彼岸</p><p>着僧伽黎 当愿众生</p><p>入第一位 得不动法</p><p>手执杨枝 当愿众生</p><p>皆得妙法 究竟清净</p><p>嚼杨枝时 当愿众生</p><p>其心调净 噬诸烦恼</p><p>大小便时 当愿众生</p><p>弃贪嗔痴 蠲除罪法</p> ";
+                }
+                if (ret.current == 724) {
+                  $api.byId('content').innerHTML = "<p>事讫就水 当愿众生</p><p>出世法中 速疾而往</p><p>洗涤形秽 当愿众生</p><p>清净调柔 毕竟无垢 </p><p>以水盥掌 当愿众生</p><p>得清净手 受持佛法</p><p>以水洗面 当愿众生</p><p>得净法门 永无垢染</p><p>手执锡杖 当愿众生</p><p>设大施会 示如实道</p><p>执持应器 当愿众生</p><p>成就法器 受天人供</p> ";
+                }
+                if (ret.current == 769) {
+                  $api.byId('content').innerHTML = "<p>发趾向道 当愿众生</p><p>趣佛所行 入无依处</p><p>若在于道 当愿众生</p><p>能行佛道 向无馀法</p><p>涉路而去 当愿众生</p><p>履净法界 心无障碍</p><p>见升高路 当愿众生</p><p>永出三界 心无怯弱</p><p>见趣下路 当愿众生</p><p>其心谦下 长佛善根</p><p>见斜曲路 当愿众生</p><p>舍不正道 永除恶见 </p> ";
+                }
+                if (ret.current == 817) {
+                  $api.byId('content').innerHTML = "<p>若见直路 当愿众生</p><p>其心正直 无谄无诳</p><p>见路多尘 当愿众生</p><p>远离尘坌 获清净法</p><p>见路无尘 当愿众生</p><p>常行大悲 其心润泽</p><p>若见险道 当愿众生</p><p>住正法界 离诸罪难</p><p>若见众会 当愿众生</p><p>说甚深法 一切和合</p><p>若见大柱 当愿众生</p><p>离我诤心 无有忿恨</p> ";
+                }
+                if (ret.current == 866) {
+                  $api.byId('content').innerHTML = "<p>若见丛林 当愿众生</p><p>诸天及人 所应敬礼</p><p>若见高山 当愿众生</p><p>善根超出 无能至顶</p><p>见棘刺树 当愿众生</p><p>疾得翦除 三毒之刺</p><p>见树叶茂 当愿众生</p><p>以定解脱 而为荫映</p><p>若见华开 当愿众生</p><p>神通等法 如华开敷</p><p>若见树华 当愿众生</p><p>众相如华 具三十二 </p> ";
+                }
+                if (ret.current == 913) {
+                  $api.byId('content').innerHTML = "<p>若见果实 当愿众生</p><p>获最胜法 证菩提道</p><p>若见大河 当愿众生</p><p>得预法流 入佛智海</p><p>若见陂泽 当愿众生</p><p>疾悟诸佛 一味之法</p><p>若见池沼 当愿众生</p><p>语业满足 巧能演说</p><p> 若见汲井 当愿众生</p><p>具足辩才 演一切法</p><p>若见涌泉 当愿众生</p><p>方便增长 善根无尽</p> ";
+                }
+                if (ret.current == 962) {
+                  $api.byId('content').innerHTML = "<p>若见桥道 当愿众生</p><p>广度一切 犹如桥梁</p><p>若见流水 当愿众生</p><p>得善意欲 洗除惑垢</p><p>见修园圃 当愿众生</p><p>五欲圃中 耕除爱草</p><p>见无忧林 当愿众生</p><p>永离贪爱 不生忧怖</p><p>若见园苑 当愿众生</p><p>勤修诸行 趣佛菩提</p><p>见严饰人 当愿众生</p><p>三十二相 以为严好 </p> ";
+                }
+                if (ret.current == 1012) {
+                  $api.byId('content').innerHTML = "<p>见无严饰 当愿众生</p><p>舍诸饰好 具头陀行</p><p>见乐著人 当愿众生</p><p>以法自娱 欢爱不舍</p><p>见无乐著 当愿众生</p><p>有为事中 心无所乐</p><p>见欢乐人 当愿众生</p><p>常得安乐 乐供养佛</p><p>见苦恼人 当愿众生</p><p>获根本智 灭除众苦</p><p>见无病人 当愿众生</p><p>入真实慧 永无病恼</p> ";
+                }
+                if (ret.current == 1062) {
+                  $api.byId('content').innerHTML = "<p>见疾病人 当愿众生</p><p>知身空寂 离乖诤法</p><p>见端正人 当愿众生</p><p>於佛菩萨 能知恩德</p><p>见背恩人 当愿众生</p><p>於有恶人 不加其报</p><p>若见沙门 当愿众生</p><p>调柔寂静 毕竟第一</p><p>见婆罗门 当愿众生</p><p>永持梵行 离一切恶</p><p>见苦行人 当愿众生</p><p>依於苦行 至究竟处</p> ";
+                }
+                if (ret.current == 1126) {
+                  $api.byId('content').innerHTML = "<p>见操行人 当愿众生</p><p>坚持志行 不舍佛道</p><p>见著甲人 当愿众生</p><p>常服善铠 趣无师法</p><p>见无铠仗 当愿众生</p><p>永离一切 不善之业</p><p>见论议人 当愿众生</p><p>于诸异论 悉能摧伏</p><p>见正命人 当愿众生</p><p>得清净命 不矫威仪</p><p>若见于王 当愿众生</p><p>得为法王 恒转正法</p> ";
+                }
+                if (ret.current == 1173) {
+                  $api.byId('content').innerHTML = "<p>若见王子 当愿众生</p><p>从法化生 而为佛子</p><p>若见长者 当愿众生</p><p>善能明断 不行恶法</p><p>若见大臣 当愿众生</p><p>恒守正念 习行善法</p><p>若见城郭 当愿众生</p><p>得坚固身 心无所屈</p><p>若见王都 当愿众生</p><p>功德共聚 心恒喜乐</p><p>见处林薮 当愿众生 </p><p>应为天人 之所叹仰</p> ";
+                }
+                if (ret.current == 1222) {
+                  $api.byId('content').innerHTML = "<p>入里乞食 当愿众生</p><p>入深法界 心无障碍</p><p>到人门户 当愿众生</p><p>入于一切 佛法之门</p><p>入其家已 当愿众生</p><p>得入佛乘 三世平等</p><p>见不舍人 当愿众生</p><p>常不舍离 胜功德法</p><p>见能舍人 当愿众生</p><p>永得舍离 三恶道苦</p><p>若见空钵 当愿众生</p><p>其心清净 空无烦恼</p> ";
+                }
+                if (ret.current == 1269) {
+                  $api.byId('content').innerHTML = "<p>若见满钵 当愿众生</p><p>具足成满 一切善法</p><p>若得恭敬 当愿众生</p><p>恭敬修行 一切佛法</p><p>不得恭敬 当愿众生</p><p>不行一切 不善之法</p><p>见惭耻人 当愿众生</p><p>具惭耻行 藏护诸法</p><p>见无惭耻 当愿众生</p><p>舍离无惭 住大慈道</p><p>若得美食 当愿众生</p><p>满足其愿 心无羡欲 </p> ";
+                }
+                if (ret.current == 1315) {
+                  $api.byId('content').innerHTML = "<p>得不美食 当愿众生</p><p>莫不获得 诸三昧法</p><p>得柔软食 当愿众生</p><p>大悲所熏 心意柔软</p><p>得粗涩食 当愿众生</p><p>心无染着 绝世贪爱</p><p>若饭食时 当愿众生</p><p>禅悦为食 法喜充满</p><p>若受味时 当愿众生</p><p>得佛上味 甘露满足</p><p>饭食已讫 当愿众生</p><p>所作皆办 具诸佛法</p> ";
+                }
+                if (ret.current == 1362) {
+                  $api.byId('content').innerHTML = "<p>若说法时 当愿众生</p><p>得无尽辩 广宣法要</p><p>从舍出时 当愿众生</p><p>深入佛智 永出三界</p><p>若入水时 当愿众生</p><p>入一切智 知三世等</p><p>洗浴身体 当愿众生</p><p>身心无垢 内外光洁</p><p>盛暑炎毒 当愿众生</p><p>舍离众恼 一切皆尽</p><p>暑退凉初 当愿众生</p><p>证无上法 究竟清凉</p> ";
+                }
+                if (ret.current == 1411) {
+                  $api.byId('content').innerHTML = "<p>讽诵经时 当愿众生</p><p>顺佛所说 总持不忘</p><p>若得见佛 当愿众生</p><p>得无碍眼 见一切佛</p><p>谛观佛时 当愿众生</p><p>皆如普贤 端正严好</p><p>见佛塔时 当愿众生</p><p>尊重如塔 受天人供</p><p>敬心观塔 当愿众生</p><p>诸天及人 所共瞻仰</p><p>顶礼于塔 当愿众生</p><p>一切天人 无能见顶</p> ";
+                }
+                if (ret.current == 1458) {
+                  $api.byId('content').innerHTML = "<p>右绕于塔 当愿众生</p><p>所行无逆 成一切智</p><p>绕塔三匝 当愿众生</p><p>勤求佛道 心无懈歇</p><p>赞佛功德 当愿众生</p><p>众德悉具 称叹无尽</p><p>赞佛相好 当愿众生</p><p>成就佛身 证无相法</p><p>若洗足时 当愿众生</p><p>具神足力 所行无碍</p><p>以时寝息 当愿众生</p><p>身得安隐 心无动乱</p> ";
+                }
+                if (ret.current == 1507) {
+                  $api.byId('content').innerHTML = "<p>睡眠始寤 当愿众生</p><p>一切智觉 周顾十方</p><p>佛子。若诸菩萨。如是用心。则获一切胜妙功德。一切世间诸天。魔。梵。沙门。婆罗门。乾闼婆。阿修罗等。及以一切声闻。缘觉。所不能动。</p> ";
+                }
+                if (ret.current == 1536) {
+                    api.closeToWin({
+                      name: 'root'
+                    });
+                  }
+                }
+              });
+          };
+</script>
+
+</html>

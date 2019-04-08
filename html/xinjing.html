@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        header {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            background-color: #373B3E;
+        }
+
+        header h1 {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        header .left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 15px;color: #fff;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: #ECDEC1;
+        }
+
+        #content {
+            font-size: 36px;
+            color: #632A00;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>心经</h1>
+        <div class="left" tapmode onclick="api.closeWin()">返回列表</div>
+    </header>
+    <div id='content'>
+        <p>观自在菩萨</p><p>行深般若波罗密多时</p><p>照见五蕴皆空</p><p>度一切苦厄</p><p>舍利子</p><p>色不异空</p><p>空不异色</p><p>色即是空</p><p>空即是色</p>
+        <p>受想行识</p><p>亦复如是</p><p>舍利子</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count =1;
+
+        audio.play({
+            path: 'widget://res/xinjing.mp3'
+        }, function(ret, err) {
+            if (ret) {
+              //    alert(JSON.stringify(ret));
+                  if(ret.current == 36 && count==1 ){
+                    count=2;
+                    changeContent();
+                  }
+                  if(ret.current == 68 && count==2 ){
+                    count=3;
+                    changeContent1();
+                  }
+                  if(ret.current == 100 && count==3 ){
+                    count=4;
+                    changeContent2();
+                  }
+                  if(ret.current == 134 && count==4 ){
+                    count=5;
+                    changeContent3();
+                  }
+                  if(ret.current == ret.duration){
+                    api.closeWin();
+                  }
+            } else {
+                //  alert(JSON.stringify(err));
+                alert("音频播放失败，请与作者联系，谢谢！作者：chenhb33@163.com");
+            }
+        });
+    };
+    function changeContent(){
+      $api.byId('content').innerHTML="<p>是诸法空相</p><p>不生不灭</p><p>不垢不净</p><p>不增不减</p><p>是故空中无色</p><p>无受想行识</p><p>无眼耳鼻舌身意</p><p>无色声香味触法</p><p>无眼界</p><p>乃至无意识界</p><p>无无明</p><p>亦无无明尽</p>";
+
+    }
+
+    function changeContent1(){
+      $api.byId('content').innerHTML="<p>乃至无老死</p><p>亦无老死尽</p><p>无苦集灭道</p><p>无智亦无得</p><p>以无所得故</p><p>菩提萨埵</p><p>依般若波罗蜜多故</p><p>心无挂碍</p><p>无挂碍故</p><p>无有恐怖</p><p>远离颠倒梦想</p><p>究竟涅盘</p>";
+
+    }
+    function changeContent2(){
+      $api.byId('content').innerHTML="<p>三世诸佛</p><p>依般若波罗蜜多故</p><p>得阿耨多罗三藐三菩提</p><p>故知般若波罗蜜多是大神咒</p><p>是大明咒</p><p>是无上咒</p><p>是无等等咒</p><p>能除一切苦</p><p>真实不虚</p><p>故说般若波罗蜜多咒</p>";
+
+    }
+    function changeContent3(){
+      $api.byId('content').innerHTML="<p>即说咒曰</p><p>揭谛揭谛</p><p>波罗揭谛</p><p>波罗僧揭谛</p><p>菩提娑婆诃</p>";
+
+    }
+    </script>
+
+</html>

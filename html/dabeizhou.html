@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+    header {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: #373B3E;
+    }
+
+    header h1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    header .left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;color: #fff;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: #ECDEC1;
+    }
+
+    #content {
+        font-size: 36px;
+        color: #632A00;
+        margin: 5px 10px;
+    }
+
+        #content .author{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+        #content .end{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>大悲咒</h1>
+        <div class="left" tapmode onclick="api.closeWin()">
+            <<返回</div>
+    </header>
+    <div id='content'>
+    <!--  <p class="author">唐罽宾国师三藏般若奉诏译</p>-->
+      <p>南無．喝囉怛那．哆囉夜耶．</p><p>南無．阿唎耶．</p><p>婆盧羯帝．爍缽囉耶．</p><p>菩提薩埵婆耶．</p><p>摩訶薩埵婆耶．</p><p>摩訶迦盧尼迦耶．</p><p>唵．薩皤囉罰曳．</p><p>數怛那怛寫．</p><p>南無悉吉慄埵．伊蒙阿唎耶．</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count = 0;
+
+        audio.play({
+            path: 'widget://res/dabeizhou.mp3'
+        }, function(ret, err) {
+            if (ret) {
+                if (ret.current == 42) {
+                  $api.byId('content').innerHTML = "<p>婆盧吉帝．室佛囉愣馱婆．</p><p>南無．那囉謹墀．</p><p>醯利摩訶皤哆沙咩．</p><p>薩婆阿他．豆輸朋．</p><p>阿逝孕．</p><p>薩婆薩哆．那摩婆薩哆．那摩婆佉．</p><p>摩罰特豆．</p><p>怛姪他．</p><p>唵．阿婆盧醯．</p><p>盧迦帝．</p>";
+                }
+                if (ret.current == 74) {
+                  $api.byId('content').innerHTML = "<p>迦羅帝．</p><p>夷醯唎．</p><p>摩訶菩提薩埵．</p><p>薩婆薩婆．</p><p>摩囉摩囉．</p><p>摩醯摩醯．唎馱孕．</p><p>俱盧俱盧．羯蒙．</p><p>度盧度盧．罰闍耶帝．</p><p>摩訶罰闍耶帝．</p><p>陀囉陀囉．</p><p>地唎尼．</p>";
+                }
+                if (ret.current == 98) {
+                  $api.byId('content').innerHTML = "<p>室佛囉耶．</p><p>遮囉遮囉．</p><p>摩麼．罰摩囉．</p><p>穆帝隸．</p><p>伊醯伊醯．</p><p>室那室那．</p><p>阿囉嘇．佛囉舍利．</p><p>罰沙罰參．</p><p>佛囉舍耶．</p><p>呼嚧呼嚧摩囉．</p><p>呼嚧呼嚧醯利．</p><p>娑囉娑囉．</p>";
+                }
+                if (ret.current == 122) {
+                  $api.byId('content').innerHTML = "<p>悉唎悉唎．</p><p>蘇嚧蘇嚧．</p><p>菩提夜．菩提夜．</p><p>菩馱夜．菩馱夜．</p><p>彌帝唎夜．</p><p>那囉謹墀．</p><p>地利瑟尼那．</p><p>波夜摩那．</p><p>娑婆訶．</p><p>悉陀夜．</p><p>娑婆訶．</p><p>摩訶悉陀夜．</p>";
+                }
+                if (ret.current == 145) {
+                  $api.byId('content').innerHTML = "</p><p>娑婆訶．</p><p>悉陀喻藝．</p><p>室皤囉耶．</p><p>娑婆訶．</p><p>那囉謹墀．</p><p>娑婆訶．</p><p>摩囉那囉．</p><p>娑婆訶．</p><p>悉囉僧．阿穆佉耶．</p><p>娑婆訶．</p>";
+                }
+                if (ret.current == 160) {
+                  $api.byId('content').innerHTML = "<p>娑婆摩訶．阿悉陀夜．</p><p>娑婆訶．</p><p>者吉囉．阿悉陀夜．</p><p>娑婆訶．</p><p>波陀摩．羯悉陀夜．</p><p>娑婆訶．</p><p>那囉謹墀．皤佉囉耶．</p><p>娑婆訶．</p><p>摩婆利．勝羯囉夜．</p><p>娑婆訶．</p>";
+                }
+                if (ret.current == 183) {
+                  $api.byId('content').innerHTML = "<p>南無喝囉怛那．哆囉夜耶．</p><p>南無阿唎耶．</p><p>婆嚧吉帝．</p><p>爍皤囉夜．</p><p>娑婆訶．</p><p>唵．悉殿都．</p><p>漫多囉．</p><p>跋陀耶．</p><p>娑婆訶．</p>";
+                }
+               if (ret.current == 200) {
+                    api.closeToWin({
+                      name: 'root'
+                    });
+                  }
+                }
+              });
+          };
+</script>
+
+</html>

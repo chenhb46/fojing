@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+    header {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: #373B3E;
+    }
+
+    header h1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    header .left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;color: #fff;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: #ECDEC1;
+    }
+
+    #content {
+        font-size: 36px;
+        color: #632A00;
+        margin: 5px 10px;
+    }
+
+        #content .author{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+        #content .end{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>大方广佛华严经净行品</h1>
+        <div class="left" tapmode onclick="api.closeWin()">
+            <<返回</div>
+    </header>
+    <div id='content'>
+      <p class="author">唐于阗国三藏沙门实叉难陀译</p>
+      <p>尔时智首菩萨问文殊师利菩萨言。</p><p>佛子。菩萨云何得无过失身语意业。云何得不害身语意业。云何得不可毁身语意业。云何得不可坏身语意业。云何得不退转身语意业。云何得不可动身语意业。云何得殊胜身语意业。</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count = 0;
+
+        audio.play({
+            path: 'widget://res/jingangjing.mp3'
+        }, function(ret, err) {
+            if (ret) {
+
+                if (ret.current == 1) {
+                  $api.byId('content').innerHTML = "<p>住去来今诸佛之道。随众生住。恒不舍离。如诸法相。悉能通达。断一切恶。具足众善。当如普贤色像第一。一切行愿皆得具足。于一切法。无不自在。而为众生第二导师。佛子。云何用心。能获一切胜妙功德。佛子。</p>";
+                }
+                if (ret.current == 33) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 36) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 39) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 42) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 45) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 48) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 51) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 54) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 57) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 60) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 63) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 66) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 69) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 72) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 75) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 78) {
+                  $api.byId('content').innerHTML = "<p></p> ";
+                }
+                if (ret.current == 81) {
+                  $api.byId('content').innerHTML = " ";
+                }
+                if (ret.current == 84) {
+                  $api.byId('content').innerHTML = " ";
+                }
+                if (ret.current == 87) {
+                    api.closeToWin({
+                      name: 'root'
+                    });
+                  }
+                }
+              });
+          };
+</script>
+
+</html>

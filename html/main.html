@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+      /*  #con {
+            margin: 10px;
+            font-size: 24px;
+            text-align: center;
+        }*/
+
+        ul {
+            margin-bottom: 10px;
+
+        }
+
+        ul li {
+            margin: 5px 10px;
+
+            color: #000;
+            word-wrap: break-word;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            border-bottom: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='fojing-list'>
+        <ul>
+            <li tapmode onclick="fnopenXinJingWin()">般若波罗蜜多心经（心经）</li>
+            <li tapmode onclick="fnopenWenShufayuanwen()">文殊师利发愿经</li>
+            <li tapmode onclick="huayanjing78_1()">大方广佛华严经卷第七十八 之一</li>
+            <li tapmode onclick="huayanjing78_2()">大方广佛华严经卷第七十八 之二</li>
+            <li tapmode onclick="huayanjing78_3()">大方广佛华严经卷第七十八 之三</li>
+            <li tapmode onclick="huayanjing78_4()">大方广佛华严经卷第七十八 之四</li>
+            <li tapmode onclick="huayanjing78_5()">大方广佛华严经卷第七十八 之五</li>
+            <li tapmode onclick="huayanjing78_6()">大方广佛华严经•普贤行愿品</li>
+            <li tapmode onclick="miaofalianhuajing23()">妙法莲华经卷六药王菩萨本事品23</li>
+            <li tapmode onclick="miaofalianhuajing25()">妙法莲华经卷七观世音菩萨普门品25</li>
+            <li tapmode onclick="jingangjing()">金刚经</li>
+            <li tapmode onclick="dabeizhou()">大悲咒</li>
+            <li tapmode onclick="fnopenhuayanjingjingxingpin()">大方广佛华严经卷第十四•净行品第11</li>
+           <!--<li tapmode onclick="testtmp()">test</li> -->
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {};
+
+    function  testtmp(){
+      api.openWin({
+          name: 'testtmp',
+          url: './tmp.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  dabeizhou(){
+      api.openWin({
+          name: 'dabeizhou',
+          url: './dabeizhou.html',
+          pageParam: {
+              name: 'dabeizhou'
+          }
+      });
+    }
+
+    function  jingangjing(){
+      api.openWin({
+          name: 'jingangjing',
+          url: './jingangjing.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  miaofalianhuajing25(){
+      api.openWin({
+          name: 'miaofalianhuajing25',
+          url: './miaofalianhuajing25.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  miaofalianhuajing23(){
+      api.openWin({
+          name: 'miaofalianhuajing23',
+          url: './miaofalianhuajing23.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  huayanjing78_6(){
+      api.openWin({
+          name: 'puxianxingyuanpin',
+          url: './puxianxingyuanpin.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  huayanjing78_5(){
+      api.openWin({
+          name: 'huaynajing78-5',
+          url: './huayanjing78-5.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  huayanjing78_4(){
+      api.openWin({
+          name: 'huaynajing78-4',
+          url: './huayanjing78-4.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  huayanjing78_3(){
+      api.openWin({
+          name: 'huaynajing78-3',
+          url: './huayanjing78-3.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  huayanjing78_1(){
+      api.openWin({
+          name: 'huaynajing78-1',
+          url: './huayanjing78-1.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+
+    function  huayanjing78_2(){
+      api.openWin({
+          name: 'huaynajing78-2',
+          url: './huayanjing78-2.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+
+    }
+
+    function fnopenXinJingWin() {
+        api.openWin({
+            name: 'xinjing',
+            url: './xinjing.html',
+            pageParam: {
+                name: 'xinjing'
+            }
+        });
+    }
+
+    function fnopenWenShufayuanwen(){
+      api.openWin({
+          name: 'wenshufayuanwen',
+          url: './wenshufayuanwen.html',
+          pageParam: {
+              name: 'wenshufayuanwen'
+          }
+      });
+    }
+
+    function fnopenhuayanjingjingxingpin(){
+      api.openWin({
+          name: 'huayanjingjingxingpin',
+          url: './huayanjingjingxingpin.html',
+          pageParam: {
+              name: 'huayanjingjingxingpin'
+          }
+      });
+    }
+</script>
+
+</html>

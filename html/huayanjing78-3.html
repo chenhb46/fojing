@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+    header {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background-color: #373B3E;
+    }
+
+    header h1 {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 19px;
+        color: #fff;
+        text-align: center;
+    }
+
+    header .left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;color: #fff;
+    }
+
+    html,
+    body {
+        height: 100%;
+        background-color: #ECDEC1;
+    }
+
+    #content {
+        font-size: 36px;
+        color: #632A00;
+        margin: 5px 10px;
+    }
+
+        #content .author{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+        #content .end{
+          font-size: 20px;color: #632A00;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>大方广佛华严经卷第七十八(之三 )</h1>
+        <div class="left" tapmode onclick="api.closeWin()">
+            <<返回</div>
+    </header>
+    <div id='content'>
+        <p>“善男子！菩提心者，成就如是无量功德；举要言之，应知悉与一切佛法诸功德等。何以故？因菩提心出生一切诸菩萨行，三世如来从菩提心而出生故。是故，善男子！若有发阿耨多罗三藐三菩提心者，则已出生无量功德，普能摄取一切智道。</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var audio = api.require('audio');
+        var count = 0;
+
+        audio.play({
+            path: 'widget://res/huayanjing78.mp3'
+        }, function(ret, err) {
+            if (ret) {
+                //    alert(JSON.stringify(ret));
+                if (count == 0) {
+                      count=1;
+                      audio.setProgress({
+                          progress: 39
+                      });
+                      audio.setVolume({
+                          volume: 0
+                      });
+
+                  }
+                //alert(JSON.stringify(ret));
+                if(ret.current == 1416 ){
+                  audio.setVolume({
+                      volume: 1
+                  });
+
+                }
+                if (ret.current == 1450 && count == 1) {
+                    count = 2;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，得无畏药，离五恐怖。何等为五？所谓：火不能烧，毒不能中，刀不能伤，水不能漂，烟不能熏。菩萨摩诃萨亦复如是，得一切智菩提心药，贪火不烧，瞋毒不中，惑刀不伤，有流不漂，诸觉观烟不能熏害。</p> ";
+                }
+                if (ret.current == 1482 && count == 2) {
+                    count = 3;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，得解脱药，终无横难。菩萨摩诃萨亦复如是，得菩提心解脱智药，永离一切生死横难。</p>";
+                }
+                if (ret.current == 1497 && count == 3) {
+                    count = 4;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，持摩诃应伽药，毒蛇闻气，即皆远去。菩萨摩诃萨亦复如是，持菩提心大应伽药，一切烦恼诸恶毒蛇，闻其气者，悉皆散灭。</p>";
+                }
+                if (ret.current == 1519 && count == 4) {
+                    count = 5;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，持无胜药，一切怨敌无能胜者。菩萨摩诃萨亦复如是，持菩提心无能胜药，悉能降伏一切魔军。</p>";
+                }
+                if (ret.current == 1535 && count == 5) {
+                    count = 6;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，持毗笈摩药，能令毒箭自然堕落。菩萨摩诃萨亦复如是，持菩提心毗笈摩药，令贪、恚、痴、诸邪见箭自然堕落。</p>";
+                }
+                if (ret.current == 1553 && count == 6) {
+                    count = 7;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，持善见药，能除一切所有诸病。菩萨摩诃萨亦复如是，持菩提心善见药王，悉除一切诸烦恼病。</p>";
+                }
+                if (ret.current == 1569 && count == 7) {
+                    count = 8;
+                    $api.byId('content').innerHTML = "<p>“善男子！如有药树，名：珊陀那，有取其皮以涂疮者，疮即除愈；然其树皮，随取随生，终不可尽。菩萨摩诃萨从菩提心生一切智树亦复如是，若有得见而生信者，烦恼业疮悉得消灭，一切智树初无所损。</p>";
+                }
+                if (ret.current == 1600 && count == 8) {
+                    count = 9;
+                    $api.byId('content').innerHTML = "<p>“善男子！如有药树，名：无生根，以其力故，增长一切阎浮提树。菩萨摩诃萨菩提心树亦复如是，以其力故，增长一切学与无学及诸菩萨所有善法。</p>";
+                }
+                if (ret.current == 1620 && count == 9) {
+                    count = 10;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有药，名：阿蓝婆，若用涂身，身之与心咸有堪能。菩萨摩诃萨得菩提心阿蓝婆药亦复如是，令其身心增长善法。</p>";
+                }
+                if (ret.current == 1639 && count == 10) {
+                    count = 11;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，得念力药，凡所闻事忆持不忘。菩萨摩诃萨得菩提心念力妙药，悉能闻持一切佛法皆无忘失。</p><p>“善男子！譬如有药，名：大莲华，其有服者住寿一劫。菩萨摩诃萨服菩提心大莲华药亦复如是，于无数劫，寿命自在。</p>";
+                }
+                if (ret.current == 1674 && count == 11) {
+                    count = 12;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，执翳形药，人与非人悉不能见。菩萨摩诃萨执菩提心翳形妙药，一切诸魔不能得见。</p>";
+                }
+                if (ret.current == 1690 && count == 12) {
+                    count = 13;
+                    $api.byId('content').innerHTML = "<p>“善男子！如海有珠，名：普集众宝，此珠若在，假使劫火焚烧世间，能令此海减于一滴，无有是处。菩萨摩诃萨菩提心珠亦复如是，住于菩萨大愿海中，若常忆持不令退失，能坏菩萨一善根者，终无是处；若退其心，一切善法即皆散灭。</p>";
+                }
+                if (ret.current == 1724 && count == 13) {
+                    count = 14;
+                    $api.byId('content').innerHTML = "<p>“善男子！如有摩尼，名：大光明，有以此珠璎珞身者，映蔽一切宝庄严具，所有光明悉皆不现。菩萨摩诃萨菩提心宝亦复如是，璎珞其身，映蔽一切二乘心宝，诸庄严具悉无光彩。</p>";
+                }
+                if (ret.current == 1750 && count == 14) {
+                    count = 15;
+                    $api.byId('content').innerHTML = "<p>“善男子！如水清珠，能清浊水。菩萨摩诃萨菩提心珠亦复如是，能清一切烦恼垢浊。</p><p> “善男子！譬如有人，得住水宝，系其身上，入大海中，不为水害。菩萨摩诃萨亦复如是，得菩提心住水妙宝，入于一切生死海中，终不沉没。</p>";
+                }
+                if (ret.current == 1782 && count == 15) {
+                    count = 16;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如有人，得龙宝珠，持入龙宫，一切龙蛇不能为害。菩萨摩诃萨亦复如是，得菩提心大龙宝珠，入欲界中，烦恼龙蛇不能为害。</p>";
+                }
+                if (ret.current == 1801 && count == 16) {
+                    count = 17;
+                    $api.byId('content').innerHTML = "<p>“善男子！譬如帝释，著摩尼冠，映蔽一切诸余天众。菩萨摩诃萨亦复如是，著菩提心大愿宝冠，超过一切三界众生。</p><p> “善男子！譬如有人，得如意珠，除灭一切贫穷之苦。菩萨摩诃萨亦复如是，得菩提心如意宝珠，远离一切邪命怖畏。</p>";
+                }
+                if(ret.current == 1835 && count== 17){
+                  count = 18;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如有人，得日精珠，持向日光而生于火。菩萨摩诃萨亦复如是，得菩提心智日宝珠，持向智光而生智火。</p>";
+                }
+                if(ret.current == 1852 && count== 18){
+                  count = 19;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如有人，得月精珠，持向月光而生于水。菩萨摩诃萨亦复如是，得菩提心月精宝珠，持此心珠，鉴回向光，而生一切善根愿水。</p>";
+                }
+                if(ret.current == 1873 && count== 19){
+                  count = 20;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如龙王，首戴如意摩尼宝冠，远离一切怨敌怖畏。菩萨摩诃萨亦复如是，著菩提心大悲宝冠，远离一切恶道诸难。</p>";
+                }
+                if(ret.current == 1890 && count== 20){
+                  count = 21;
+                  $api.byId('content').innerHTML="<p>“善男子！如有宝珠，名：一切世间庄严藏，若有得者，令其所欲悉得充满，而此宝珠无所损减。菩提心宝亦复如是，若有得者，令其所愿悉得满足，而菩提心无有损减。</p>";
+                }
+                if(ret.current == 1914 && count== 21){
+                  count = 22;
+                  $api.byId('content').innerHTML="<p>“善男子！如转轮王，有摩尼宝，置于宫中，放大光明，破一切暗。菩萨摩诃萨亦复如是，以菩提心大摩尼宝，住于欲界，放大智光，悉破诸趣无明黑暗。</p>";
+                }
+                if(ret.current == 1936 && count== 22){
+                  count = 23;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如帝青大摩尼宝，若有为此光明所触，即同其色。菩萨摩诃萨菩提心宝亦复如是，观察诸法回向善根，靡不即同菩提心色。</p>";
+                }
+                if(ret.current == 1955 && count== 23){
+                  count = 24;
+                  $api.byId('content').innerHTML="<p>“善男子！如琉璃宝，于百千岁处不净中，不为臭秽之所染著，性本净故。菩萨摩诃萨菩提心宝亦复如是，于百千劫住欲界中，不为欲界过患所染，犹如法界性清净故。</p>";
+                }
+                if(ret.current == 1980 && count== 24){
+                  count = 25;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如有宝，名：净光明，悉能映蔽一切宝色。菩萨摩诃萨菩提心宝亦复如是，悉能映蔽一切凡夫二乘功德。</p><p>“善男子！譬如有宝，名为：火焰，悉能除灭一切暗冥。菩萨摩诃萨菩提心宝亦复如是，能灭一切无知暗冥。</p>";
+                }
+                if(ret.current == 2012 && count== 25){
+                  count = 26;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如海中有无价宝，商人采得，船载入城；诸余摩尼百千万种，光色、价直无与等者。菩提心宝亦复如是，住于生死大海之中，菩萨摩诃萨乘大愿船，深心相续，载之来入解脱城中，二乘功德无能及者。</p>";
+                }
+                if(ret.current == 2043 && count== 26){
+                  count = 27;
+                  $api.byId('content').innerHTML="<p>“善男子！如有宝珠，名：自在王，处阎浮洲，去日月轮四万由旬，日月宫中所有庄严，其珠影现悉皆具足。菩萨摩诃萨发菩提心净功德宝亦复如是，住生死中，照法界空，佛智日月一切功德悉于中现。</p>";
+                }
+                if(ret.current == 2074 && count== 27){
+                  count = 28;
+                  $api.byId('content').innerHTML="<p>“善男子！如有宝珠，名：自在王，日月光明所照之处，一切财宝、衣服等物，所有价值悉不能及。菩萨摩诃萨发菩提心自在王宝亦复如是，一切智光所照之处，三世所有天人、二乘漏无漏善一切功德皆不能及。</p>";
+                }
+                if(ret.current == 2103 && count== 28){
+                  count = 29;
+                  $api.byId('content').innerHTML="<p>“善男子！海中有宝，名曰：海藏，普现海中诸庄严事。菩萨摩诃萨菩提心宝亦复如是，普能显现一切智海诸庄严事。</p>";
+                }
+                if(ret.current == 2120 && count== 29){
+                  count = 30;
+                  $api.byId('content').innerHTML="<p>“善男子！譬如天上阎浮檀金，唯除心王大摩尼宝，余无及者。菩萨摩诃萨发菩提心阎浮檀金亦复如是，除一切智心王大宝，余无及者。</p>";
+                }
+                if (ret.current == 2140 && count == 30) {
+                    audio.stop();
+                    api.confirm({
+                        title: '是否继续之四？',
+                        msg: '是否继续播放华严经第78卷之四？',
+                        buttons: ['继续', '取消']
+                    }, function(ret, err) {
+                        if (ret) {
+                            //alert( JSON.stringify( ret ) );
+                            if (ret.buttonIndex == 1) {
+                              api.openWin({
+                                  name: 'huaynajing78-4',
+                                  url: './huayanjing78-4.html',
+                                  pageParam: {
+                                      name: 'test'
+                                  }
+                              });
+                            }
+                            if (ret.buttonIndex == 2) {
+                                api.closeToWin({
+                                    name: 'root'
+                                });
+
+                            }
+                        } else {
+                            alert(JSON.stringify(err));
+                        }
+                    });
+
+                }
+            } else {
+                //  alert(JSON.stringify(err));
+                alert("音频播放失败，请与作者联系，谢谢！作者：chenhb33@163.com");
+            }
+        });
+    };
+</script>
+
+</html>
